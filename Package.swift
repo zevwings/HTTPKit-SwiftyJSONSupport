@@ -29,7 +29,7 @@ let package = Package(
     targets: [
         .target(
             name: "SwiftyJSONSupport",
-            dependencies: ["HTTPKit"],
+            dependencies: ["HTTPKit", "SwiftyJSON"],
             path: "SwiftyJSONSupport"
         ),
         .target(
