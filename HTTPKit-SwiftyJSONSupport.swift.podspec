@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name             = "HTTPKit-SwiftyJSONSupport.swift"
   spec.module_name      = "SwiftyJSONSupport"
-  spec.version          = "0.0.6"
+  spec.version          = "1.0.0"
   spec.summary          = "`SwiftyJSON` support for `HTTPKit `"
   spec.swift_version    = "5.1"
   
@@ -11,11 +11,11 @@ Pod::Spec.new do |spec|
                 HTTPKit decode Data Support - SwiftyJSON
                    DESC
 
-  spec.homepage     = "https://github.com/zevwings/HTTPKitSupport"
+  spec.homepage     = "https://github.com/zevwings/HTTPKit-SwiftyJSONSupport"
   spec.license      = "Apache"
   spec.author       = { "zevwings" => "zev.wings@gmail.com" }
   spec.platform     = :ios, "10.0"
-  spec.source       = { :git => "https://github.com/zevwings/HTTPKitSupport.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/zevwings/HTTPKit-SwiftyJSONSupport.git", :tag => "#{spec.version}" }
   spec.requires_arc = true
 
   spec.default_subspecs = "Core"
