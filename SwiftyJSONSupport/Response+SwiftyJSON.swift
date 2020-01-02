@@ -13,6 +13,15 @@ import HTTPKit
 public extension Response {
 
     func mapJSONObject() throws -> JSON {
-        return try JSON(data: data, options: [.allowFragments, .mutableContainers, .mutableLeaves])
+        let json: JSON
+        do {
+            json = try JSON(data: data, options: [.allowFragments, .mutableContainers, .mutableLeaves])
+            HTTPLogger.response(.verbose, targetType: JSON.self, request: request, extra: json)
+        } catch {
+            let err = HTTPError.cast(value: data, targetType: JSON.self, request: request, response: response)
+            HTTPLogger.failure(.verbose, error: err)
+            throw err
+        }
+        return json
     }
 }
